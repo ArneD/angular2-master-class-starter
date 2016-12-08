@@ -8,9 +8,10 @@ import { ContactsHeaderComponent } from './contacts-header';
 import { ContactsService } from './contacts.service';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { AppRoutingModule, routingComponents } from './app.routes';
+import { ContactsDetailComponent } from './contacts-detail/contacts-detail.component';
 
 @NgModule({
-  declarations: [ContactsAppComponent, ContactsHeaderComponent, routingComponents],
+  declarations: [ContactsAppComponent, ContactsHeaderComponent, routingComponents, ContactsDetailComponent],
   imports: [BrowserModule, CommonModule, AppRoutingModule],
   providers: [ContactsService],
   bootstrap: [ContactsAppComponent]

@@ -11,4 +11,8 @@ export class ContactsService {
     return CONTACT_DATA;
   }
 
+  getContactById(id: number) : Contact {
+    return CONTACT_DATA.find(contact => contact.id == id);
+  }
+
 }
