@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Contact } from './models/contact';
-import { NgFor } from '@angular/common';
 import { CONTACT_DATA } from './data/contact-data';
 
 @Component({
