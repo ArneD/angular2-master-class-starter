@@ -12,15 +12,18 @@ export class ContactsService {
   constructor(private http: Http) { }
 
   getContacts(): Observable<Contact[]> {
-    return this.http.get(this.API_ENDPOINT + '/contacts')
+    return this.http.get(`${this.API_ENDPOINT}/contacts`)
       .map(res => res.json())
       .map(data => data.items);
   }
 
   getContactById(id: number) : Observable<Contact> {
-    return this.http.get(this.API_ENDPOINT + '/contacts/' + id)
-        .map(res => res.json())
-        .map(data => data.item);
+    return this.http.get(`${this.API_ENDPOINT}/contacts/${id}`)
+        .map(res => res.json().item);
+  }
+
+  updateContact(contact: Contact) : Observable<any> {
+    return this.http.put(`${this.API_ENDPOINT}/contacts/${contact.id}`, contact);
   }
 
 }
