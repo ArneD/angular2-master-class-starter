@@ -1,3 +1,4 @@
+import { API_ENDPOINT } from './tokens';
 import { Injectable, Inject } from '@angular/core';
 import { Contact } from './models/contact';
 import { CONTACT_DATA } from './data/contact-data';
@@ -7,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ContactsService {
 
-  constructor(private http: Http, @Inject('API_ENDPOINT') private API_ENDPOINT: string) { }
+  constructor(private http: Http, @Inject(API_ENDPOINT) private API_ENDPOINT: string) { }
 
   getContacts(): Observable<Contact[]> {
     return this.http.get(`${this.API_ENDPOINT}/contacts`)
