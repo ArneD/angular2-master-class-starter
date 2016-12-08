@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { ContactsAppComponent } from './contacts.component';
 import { ContactsHeaderComponent } from './contacts-header';
 import { ContactsService } from './contacts.service';
+import { ContactsListComponent } from './contacts-list/contacts-list.component';
 
 @NgModule({
-  declarations: [ContactsAppComponent, ContactsHeaderComponent],
+  declarations: [ContactsAppComponent, ContactsHeaderComponent, ContactsListComponent],
   imports: [BrowserModule, CommonModule],
   providers: [ContactsService],
   bootstrap: [ContactsAppComponent]
